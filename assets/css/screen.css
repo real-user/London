@@ -38,8 +38,9 @@ production stylesheet in assets/built/screen.css using gulp dev
     z-index: 1;
     position: sticky;
     width: 100%;
-    padding: 1vw 3vw 1vw;
+/*  padding: 1vw 3vw 1vw;  */
     top: 0;
+    height: 6vh;
 }
 
 .is-head-open #gh-head {
@@ -76,7 +77,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 }
 
 .site-header-cover{
-    height: 100vh;
+    height: 94vh;
     width: 100vw;
     overflow: auto;
     object-fit: cover;
@@ -161,6 +162,12 @@ production stylesheet in assets/built/screen.css using gulp dev
 @media (max-width: 850px) {
     .gh-head {
         margin: 0vw;
+        height: 6vh;
+    }
+}
+@media (max-width: 767px) {
+    #gh-head .gh-head-brand {
+        height: 6vh;
     }
 }
 
