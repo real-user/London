@@ -32,6 +32,58 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* Layout
 /* ---------------------------------------------------------- */
 
+
+/* Edited */
+.gh-head {
+    z-index: 1;
+    position: sticky;
+    width: 100%;
+    padding: 1vw 3vw 1vw;
+    top: 0;
+}
+
+.is-head-open #gh-head {
+    margin: 0vw;
+    padding: 1vw 9vw;
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column-one {
+    max-width: 360px;
+}
+
+.column-two {
+    max-width: 360px;
+}
+
+@media (max-width: 850px) {
+    .columns {
+        display: block;
+    }
+    .column-one {
+        max-width: 100%;
+    }
+
+    .column-two {
+        max-width: 100%;
+    }
+
+}
+
+.site-header-cover{
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    object-fit: cover;
+}
+
+/* End Edited */
+
 .gh-canvas {
     margin-right: calc(var(--gap) * -1);
     margin-left: calc(var(--gap) * -1);
@@ -44,7 +96,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 @media (max-width: 850px) {
     .site-wrapper {
-        padding: 6vw;
+        padding: 0vw 6vw;
     }
 }
 
@@ -108,7 +160,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 @media (max-width: 850px) {
     .gh-head {
-        margin: -6vw;
+        margin: 0vw;
     }
 }
 

@@ -19,8 +19,25 @@
 
 </head>
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-<div class="site-wrapper">
 
+
+{{#is "home"}}
+    {{#if @site.cover_image}}
+        {{!-- This is a responsive image, it loads different sizes depending on device
+        https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+        <img class="site-header-cover"
+            srcset="{{img_url @site.cover_image size="s"}} 300w,
+                    {{img_url @site.cover_image size="m"}} 600w,
+                    {{img_url @site.cover_image size="l"}} 1000w,
+                    {{img_url @site.cover_image size="xl"}} 2000w"
+            sizes="100vw"
+            src="{{img_url @site.cover_image size="xl"}}"
+            alt="{{@site.title}}"
+        />
+    {{/if}}
+{{/is}}
+
+<div class="site-wrapper">
     <header id="gh-head" class="gh-head gh-outer">
         <div class="gh-head-inner gh-inner">
             <div class="gh-head-brand">
@@ -78,7 +95,7 @@
         <div class="gh-foot-inner gh-inner">
             <nav class="gh-foot-menu"></nav>
             <div class="gh-copyright">
-                {{@site.title}} © {{date format="YYYY"}} — <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+                {{@site.title}} © {{date format="YYYY"}}
             </div>
             <div class="gh-powered-by"></div>
         </div>

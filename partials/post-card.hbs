@@ -5,7 +5,7 @@ For the rest, just output a smaller background image
 
 --}}
 
-<article class="post-card {{#has number="nth:3"}}post-card-large{{/has}} {{post_class}}">
+<article class="post-card {{post_class}}">
     <a class="post-card-link" href="{{url}}">
         {{#if feature_image}}
             <img
@@ -14,7 +14,7 @@ For the rest, just output a smaller background image
                         {{img_url feature_image size="l"}} 1200w,
                         {{img_url feature_image size="xl"}} 2000w,
                         {{img_url feature_image}}"
-                sizes="(min-width: 701px) {{#has number="nth:3"}}94vw{{else}}calc(94vw / 2){{/has}}, 88vw"
+                sizes="(min-width: 701px) calc(94vw / 2), 88vw"
                 src="{{img_url feature_image size="l"}}"
                 alt="{{title}}"
             >

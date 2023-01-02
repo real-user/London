@@ -1,7 +1,7 @@
 {
-    "name": "london",
+    "name": "london-adam",
     "description": "A minimum, image-centric theme for Ghost.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -57,7 +57,11 @@
         "custom": {
             "navigation_layout": {
                 "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
                 "default": "Logo on the left"
             },
             "title_font": {
@@ -84,7 +88,7 @@
         "zip": "gulp zip"
     },
     "devDependencies": {
-        "@tryghost/shared-theme-assets": "2.0.1",
+        "@tryghost/shared-theme-assets": "^2.0.1",
         "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
         "cssnano": "5.1.14",
