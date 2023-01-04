@@ -45,7 +45,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 .is-head-open #gh-head {
     margin: 0vw;
-    padding: 1vw 9vw;
+    padding: 0vw 6vw;
 }
 
 .columns {
@@ -81,6 +81,11 @@ production stylesheet in assets/built/screen.css using gulp dev
     width: 100vw;
     overflow: auto;
     object-fit: cover;
+}
+
+.gh-outer{
+    padding-left: 0vh;
+    padding-right: 0vh;
 }
 
 /* End Edited */
@@ -159,17 +164,57 @@ production stylesheet in assets/built/screen.css using gulp dev
     font-weight: 600;
 }
 
-@media (max-width: 850px) {
+/* ipad and ipad pro landscape mode */
+@media only screen 
+and (min-width:1365px) 
+and (max-width:1367px) 
+and (min-height: 916px) 
+and (max-height: 1025px) 
+and (orientation:landscape){
     .gh-head {
         margin: 0vw;
         height: 6vh;
     }
-}
-@media (max-width: 767px) {
-    #gh-head .gh-head-brand {
-        height: 6vh;
+    .site-header-cover{
+        height: 87vh;
     }
 }
+
+/* ipad and ipad pro porttrait */
+@media only screen 
+and (min-width:1023px) 
+and (max-width:1025px) 
+and (min-height:1258px)
+and (max-height: 1367px) 
+and (orientation:portrait) {
+    .gh-head {
+        margin: 0vw;
+        height: 6vh;
+    }
+    .site-header-cover{
+        height: 88vh;
+    }
+}
+
+@media only screen 
+and (max-width: 430px) 
+and (max-height: 930px) 
+and (orientation:portrait) {
+    .gh-head {
+        height: 7vh;
+    }
+
+    #gh-head {
+        height: 7vh;
+    }
+    .site-header-cover{
+        height: 82vh;
+    }
+    #gh-head .gh-head-brand{
+        height: 7vh;
+    }
+}
+
 
 /* Post Feed
 /* ---------------------------------------------------------- */
